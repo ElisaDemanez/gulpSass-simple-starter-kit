@@ -31,8 +31,8 @@ gulp.task('uglify', function() {
 
 gulp.task('watch',['browserSync','sass','uglify'], function (){
   gulp.watch("*.html").on('change', browserSync.reload);
-  gulp.watch('assets/scss/main.scss', ['sass']); 
-  gulp.watch('assets/js/app.js',['uglify']);
+  gulp.watch('assets/scss/*.scss', ['sass']); 
+  gulp.watch('assets/js/*.js',['uglify']);
 });
 
 gulp.task('default', ['browserSync','uglify','sass','watch']);
